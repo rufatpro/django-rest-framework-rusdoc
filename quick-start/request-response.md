@@ -7,7 +7,7 @@
 DRF использует объект `Request`, расширяющий функционал стандартного `HttpRequest` и позволяющий более гибко разбирать запросы. Основной функицонал `Request` в том, что он предоставляет аттрибут `request.data`, который схож с `request.POST`, однако более полезен при работе с API.
 
 ```py
-request.POST  # Содрежит только данные из формы.  Работает только с методом POST.
+request.POST  # Содержит только данные из формы.  Работает только с методом POST.
 request.data  # Обрабатывает произвольные данные.  Работает с POST, PUT и PATCH методами.
 ```
 
@@ -169,11 +169,11 @@ http http://127.0.0.1:8000/snippets/ Accept:application/json  # Request JSON
 http http://127.0.0.1:8000/snippets/ Accept:text/html         # Request HTML
 ```
 
-Или с помощью добавления в конец пределителя формата:
+Или с помощью добавления в конец расширения файла для формата:
 
 ```
 http http://127.0.0.1:8000/snippets.json  # JSON Формат
-http http://127.0.0.1:8000/snippets.api   # ФОрмат браузерной версии API
+http http://127.0.0.1:8000/snippets.api   # Формат браузерной версии API
 ```
 
 Так же мы можем управлять форматом запроса, который мы отправили, используя заголовок `Content-Type`.
@@ -217,4 +217,4 @@ http --json POST http://127.0.0.1:8000/snippets/ code="print 456"
 <!-- See the browsable api topic for more information about the browsable API feature and how to customize it. -->
 ## Что дальше?
 
-В [уроке 3](class-based-views.md), мы будем использовать представления-классы(class-based views, CBV) и посмотрим, как встроенные представления уменьшат количесво необходимого кода.
+В [уроке 3](class-based-views.md), мы будем использовать представления-классы(class-based views, CBV) и посмотрим, как встроенные представления уменьшат количество необходимого кода.
